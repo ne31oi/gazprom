@@ -1,6 +1,38 @@
 @import "includes/base";
 @import "includes/bs-grid/grid";
 @import "includes/variables";
+@font-face {
+    font-family: Akrobat-Black;
+    font-weight: bold;
+    src: url("../fonts/Akrobat-Black.otf") format("opentype");
+}
+@font-face {
+    font-family: Akrobat-Bold;
+    font-weight: bold;
+    src: url("../fonts/Akrobat-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: Akrobat-Light;
+    font-weight: light;
+    src: url("../fonts/Akrobat-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: Akrobat-Regular;
+    font-weight: normal;
+    src: url("../fonts/Akrobat-Regular.otf") format("opentype");
+}
+
+
+@font-face {
+    font-family: Nekst-Bold-Desktop;
+    font-weight: bold;
+    src: url("../fonts/Nekst-Bold-Desktop.otf") format("opentype");
+}
+@font-face {
+    font-family: Nekst-Regular-Desktop;
+    font-weight: normal;
+    src: url("../fonts/Nekst-Regular-Desktop.otf") format("opentype");
+}
 
 
 
@@ -24,9 +56,17 @@ header,
 footer {
     position: relative;
 }
-
+.bg-canvas{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
 body {
     color: #fff;
+    font-family: Akrobat-Regular;
+    position: relative;
 }
 
 header {
@@ -87,7 +127,15 @@ header:before {
     background: #02005e;
 
 }
-
+h1{
+  font-size: calc(1.45 * #{$standartSize});
+  font-family: Nekst-Bold-Desktop;
+  
+}
+.subtext{
+    font-size: calc(.8 * #{$standartSize});
+    font-family: Nekst-Regular-Desktop;
+  }
 .plus {
     position: absolute;
     width: calc(#{$standartSize} * 0.17);
