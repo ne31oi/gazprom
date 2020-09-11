@@ -141,13 +141,18 @@ gulp.task('fonts', function() {
       .pipe(gulp.dest('./public/fonts/'));
   
 });
+gulp.task('assets', function() {
+  gulp.src('./src/assets/*.*')
+      .pipe(gulp.dest('./public/assets/'));
+  
+});
 /**
  * Task group for development
  * Группа задач для разработки
  */
 gulp.task('develop', function () {
 	runSequence('build-clean',
-		['sass', 'javascript', 'image-min', 'pug','fonts'],
+		['sass', 'javascript', 'image-min', 'pug','fonts','assets'],
 		'browser-sync');
 });
 
@@ -157,7 +162,7 @@ gulp.task('develop', function () {
  */
 gulp.task('build-dist', function () {
 	runSequence('build-clean',
-		['sass', 'javascript', 'image-min', 'pug','fonts']);
+		['sass', 'javascript', 'image-min', 'pug','fonts','assets']);
 });
 
 /**

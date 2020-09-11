@@ -13,6 +13,7 @@ header.row
     .plus.plus03
     .plus.plus04
     .plus.plus05
+    <div id="main-canvas"></div>
 section.section01
     .gradient1
     .gradient2
@@ -20,7 +21,7 @@ section.section01
     h2
         .text Нефть 
             br 
-            | основе
+            | в основе
             br 
             | всего
 
@@ -45,22 +46,44 @@ section.section01
         .year 2018
         .data
             .data-item.data-item1
-                .item 5%
+                .item 
+                    span(data-num-old="6" data-num="5") 5%
+                    img(src="img/atom.png" alt="")
                 .text Атомная энергия
             .data-item.data-item2
-                .item 23%
+                .item
+                    span(data-num-old="25" data-num="23")  23%
+                    img(src="img/Group 3.png" alt="")
                 .text Природный газ
             .data-item.data-item3
-                .item 5%
+                .item 
+                    span(data-num-old="17" data-num="12") 12%
+                    img(src="img/sun.png" alt="")
                 .text ВИЭ
             .data-item.data-item4
-                .item 27%
+                .item 
+                    span(data-num-old="23" data-num="27") 27%
+                    img(src="img/coal.png" alt="")
                 .text Уголь
             .data-item.data-item5
-                .item 32%
+                .item 
+                    span(data-num-old="29" data-num="32") 32%
+                    img(src="img/oil.png" alt="")
                 .text Нефть
     .img1
         img(src="img/img1.png")
+    .plus.plus06
+    .plus.plus07
+    .plus.plus08
+    .plus.plus09
+    .plus.plus10
+    .plus.plus11
+    .plus.plus12
+    .plus.plus13
+    .plus.plus14
+    .plus.plus15
+    .plus.plus16
+    .plus.plus17
     
 section.section02
     img(src="img/image1.png" alt="Ханты-Мансийский автономный округ – Югра – один из ключевых регионов нефтедобычи в России.").fullimg
@@ -74,9 +97,57 @@ section.section03
     .text2 К тому же, сравнивая альтернативные источники энергии с углеводородами, нельзя забывать о том, что нефть, газ и продукты их переработки — это не только источники тепловой и электрической энергии, но и сырье для нефте- и газохимии. Пластики, удобрения, стройматериалы, дорожное покрытие – все это мы получаем из углеводородов.
     .text5 Жидкие углеводороды и возобновляемые источники энергии впрямую практически не конкурируют.
     .text2.text6 Вроде бы парадокс, но факт: жидкие углеводороды (нефть и газовый конденсат) и возобновляемые источники энергии впрямую практически не конкурируют. Жидкие углеводороды используются в основном как топливо для транспорта (56%) и в промышленности (29%). А вот в производстве электроэнергии доля нефти не более 5%. Мы живем в период, когда разные источники энергии заняли свои ниши и не мешают друг другу. Развитие возобновляемых источников не означает отказа от нефти, которая по-прежнему стратегически важна для мировой экономики. По прогнозам экспертов, эту роль она будет играть еще много десятков лет. 
+    .img2
+        img(src="img/img2.png")
+    .img3
+        img(src="img/img3.png")
+    .plus.plus18
+    .plus.plus19
+    .plus.plus20
+    .plus.plus21
+    .plus.plus22
+    .plus.plus23
+    .plus.plus24
+    .plus.plus25
 section.section-quest
     .bg_tile
+    <div class="part__quiz" id="quiz1">
+        <div class="part__quiz__title">Что
+            <br> можно
+            <br> делать
+            <br> из нефти?</div>
+        <div class="part__quiz__items">
+            <div class="part__quiz__item item1" data-quiz="f">
+                <div class="part__quiz__item__mark"></div>
+                <div class="part__quiz__item__text">Только бензин. Все виды – от 76-го до суперкачественного 100-го.</div>
+            </div>
+            <div class="part__quiz__item item2" data-quiz="f">
+                <div class="part__quiz__item__mark"></div>
+                <div class="part__quiz__item__text">Бензин и дизельное топливо. И все. Но разве этого мало? Без них никуда.</div>
+            </div>
+            <div class="part__quiz__item item3" data-quiz="f">
+                <div class="part__quiz__item__mark"></div>
+                <div class="part__quiz__item__text">Все виды топлива, а также битумы для дорог.</div>
+            </div>
+            <div class="part__quiz__item item4" data-quiz="t">
+                <div class="part__quiz__item__mark"></div>
+                <div class="part__quiz__item__text">Список бесконечен – от бензина до одежды и косметики и даже аспирин.</div>
+            </div>
+        </div>
+    </div>
 section.section-answ
+
+    <div class="part__answer answer1 false"><span>Не верно! Помимо бензина и авитоплива и битумов из нефти делают даже самые неочевидные вещи: искусственный мех и детские игрушки, тени для век и шампуни, лекарства и жевательные резинки.</span></div>
+    <div class="part__answer answer1 true"><span>Все так! Помимо бензина и авитоплива и битумов из нефти делают даже самые неочевидные вещи: искусственный мех и детские игрушки, тени для век и шампуни, лекарства и жевательные резинки.</span></div>
+    .plus.plus26
+    .plus.plus27
+
+<script src="https://threejs.org/build/three.js"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://code.createjs.com/1.0.0/tweenjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
 
 
 
