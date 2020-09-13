@@ -215,13 +215,22 @@ function init() {
 
 
     render();
-    $(".part__quiz__item").on("click", function(e) {
+    $("#quiz1 .part__quiz__item").on("click", function(e) {
         if ($(this).hasClass("item4")) {
             $(".part__answer.answer1.false").hide();
             $(".part__answer.answer1.true").css('display', 'flex');
         } else {
             $(".part__answer.answer1.false").css('display', 'flex');
             $(".part__answer.answer1.true").hide();
+        }
+    });
+    $("#quiz2 .part__quiz__item").on("click", function(e) {
+        if ($(this).hasClass("item2")) {
+            $(".part__answer.answer2.false").hide();
+            $(".part__answer.answer2.true").css('display', 'flex');
+        } else {
+            $(".part__answer.answer2.false").css('display', 'flex');
+            $(".part__answer.answer2.true").hide();
         }
     });
 }

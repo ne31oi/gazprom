@@ -146,6 +146,8 @@ header:before {
 .section-answ {
     height: calc(6 * #{$standartSize});
     background: #02005e;
+    position: relative;
+    z-index: 3;
 
 }
 
@@ -383,6 +385,7 @@ h1 {
 .logo_gazprom {
     max-height: 100%;
     max-width: 100%;
+    z-index: 9
 }
 
 .logo_tass {
@@ -406,6 +409,121 @@ h1 {
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
+}
+
+.section03.section06 {
+    height: calc(50 * #{$standartSize});
+
+    .text2.text4 {
+        top: calc(2 * #{$standartSize});
+        left: calc(5 * #{$standartSize});
+        width: calc(6 * #{$standartSize});
+        height: calc(6 * #{$standartSize});
+
+    }
+
+    .gradient2 {
+        top: calc(10 * #{$standartSize});
+        height: calc(12 * #{$standartSize});
+    }
+
+    .img4 {
+        top: calc(10 * #{$standartSize});
+        height: calc(11.37 * #{$standartSize});
+        left: calc(1.66 * #{$standartSize});
+    }
+
+    .text2.text6 {
+        top: calc(23 * #{$standartSize});
+        left: calc(5 * #{$standartSize});
+        width: calc(6 * #{$standartSize});
+        height: calc(12 * #{$standartSize});
+    }
+
+    .quote {
+        top: calc(36 * #{$standartSize});
+        left: calc(4 * #{$standartSize});
+        width: calc(8 * #{$standartSize});
+
+        .quote_text {
+            height: calc(12 * #{$standartSize});
+        }
+    }
+
+    .img2 {
+        top: calc(1 * #{$standartSize});
+        left: calc(9.5 * #{$standartSize});
+        height: calc(12 * #{$standartSize});
+    }
+
+    .img3 {
+        top: calc(26 * #{$standartSize});
+        left: calc(8 * #{$standartSize});
+        height: calc(13 * #{$standartSize});
+    }
+
+    .plus19 {
+        top: calc(9 * #{$standartSize});
+    }
+
+    .plus23 {
+        display: none;
+    }
+
+    .plus20,
+    .plus24 {
+        top: calc(23 * #{$standartSize});
+    }
+
+    .plus21 {
+        top: calc(35 * #{$standartSize});
+    }
+}
+
+.section-quest.quest2 {
+    position: relative;
+    z-index: 2;
+    height: calc(7 * #{$standartSize});
+
+    .part__quiz__title {
+        width: 100%;
+        margin-right: 0;
+        height: calc(3 * #{$standartSize});
+        align-items: flex-start;
+        font-size: calc(.35 * #{$standartSize});
+        line-height: calc(.37 * #{$standartSize});
+    }
+
+    .part__quiz__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .part__quiz__item{
+            width: calc(3 * #{$standartSize});
+        }
+        .part__quiz__item__text{
+            width: calc(2 * #{$standartSize});
+        }
+    }
+
+    .part__quiz {
+        flex-direction: column;
+        left: calc(4 * #{$standartSize});
+    }
+
+    .plus24,
+    .plus25 {
+        top: 0;
+    }
+
+    .plus24 {
+        left: calc(3 * #{$standartSize});
+    }
+
+    .plus25 {
+        left: calc(13 * #{$standartSize});
+    }
+
 }
 
 .gradient1 {
@@ -610,6 +728,87 @@ h1 {
     }
 }
 
+.section01.section04 {
+    height: calc(25 * #{$standartSize});
+
+    h2 {
+        top: calc(2 * #{$standartSize});
+        left: calc(4 * #{$standartSize});
+        width: calc(8 * #{$standartSize});
+
+        .text {
+            line-height: calc(1 * #{$standartSize});
+        }
+
+        span {
+            margin-left: calc(-3 * #{$standartSize});
+            margin-right: 0;
+        }
+
+    }
+
+    .text1 {
+        top: calc(9 * #{$standartSize});
+        left: calc(5 * #{$standartSize});
+        width: calc(6 * #{$standartSize});
+        height: calc(2 * #{$standartSize});
+        z-index: 2;
+        align-items: flex-end;
+    }
+
+    .text2 {
+        top: calc(5 * #{$standartSize});
+        left: calc(5 * #{$standartSize});
+        width: calc(6 * #{$standartSize});
+        height: calc(4 * #{$standartSize});
+        z-index: 2;
+    }
+
+    .text4 {
+        top: calc(16 * #{$standartSize});
+        left: calc(5 * #{$standartSize});
+        width: calc(6 * #{$standartSize});
+        height: calc(8 * #{$standartSize});
+    }
+
+    .img1 {
+        top: calc(10 * #{$standartSize});
+        left: calc(1 * #{$standartSize});
+        height: calc(6.09 * #{$standartSize});
+    }
+
+    .gradient2 {
+        bottom: calc(10 * #{$standartSize});
+        height: calc(15 * #{$standartSize});
+    }
+
+    .plus12,
+    .plus06,
+    .plus14 {
+        top: calc(5 * #{$standartSize});
+    }
+
+    .plus07,
+    .plus13 {
+        display: none;
+    }
+
+    .plus08,
+    .plus15 {
+        top: calc(9 * #{$standartSize});
+    }
+
+    .plus10,
+    .plus16 {
+        top: calc(16 * #{$standartSize});
+    }
+
+    .plus11,
+    .plus17 {
+        top: calc(24 * #{$standartSize});
+    }
+}
+
 .section01 {
     h2 {
         position: absolute;
@@ -801,16 +1000,15 @@ h1 {
             position: relative;
 
             &:before {
-                border: 3px solid #FFFFFF;
-                width: 18px;
-                height: 18px;
+                border: calc(.2/6 * #{$standartSize}) solid #FFFFFF;
+                width: calc(.2 * #{$standartSize});
+                height: calc(.2 * #{$standartSize});
                 border-radius: 50%;
                 content: '';
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                margin-top: -9px;
-                margin-left: -9px;
+                transform: translate(-50%, -50%);
             }
         }
 
@@ -822,7 +1020,7 @@ h1 {
             align-items: center;
             letter-spacing: 0.7px;
             color: #FFFFFF;
-            width: 339px;
+            width: calc(4 * #{$standartSize});
         }
 
         &.true {
@@ -847,10 +1045,6 @@ h1 {
     }
 }
 
-.part__answer.answer1 {
-    display: none;
-}
-
 .part__answer {
     width: calc(6 * #{$standartSize});
     height: calc(2 * #{$standartSize});
@@ -858,13 +1052,13 @@ h1 {
     padding: calc(.3 * #{$standartSize});
     left: calc(5 * #{$standartSize});
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
 
     span {
-        font-family: Akrobat;
+        font-family: Akrobat-Regular;
 
         font-size: calc(.2 * #{$standartSize});
         line-height: calc(.2 * #{$standartSize});
