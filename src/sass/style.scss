@@ -61,6 +61,16 @@ header {
     height: calc(9 * #{$standartSize});
 }
 
+.fade {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
 * {
     box-sizing: border-box;
     outline: none;
@@ -86,6 +96,7 @@ body {
     color: #fff;
     font-family: Akrobat-Regular;
     position: relative;
+    background: #000;
 }
 
 header {
@@ -141,6 +152,7 @@ header:before {
 .section-quest {
     height: calc(6 * #{$standartSize});
     background: #02005e;
+    z-index: 3;
 }
 
 .section-answ {
@@ -431,6 +443,26 @@ h1 {
         top: calc(10 * #{$standartSize});
         height: calc(11.37 * #{$standartSize});
         left: calc(1.66 * #{$standartSize});
+        overflow: hidden;
+    }
+
+    #img7_2,
+    #img7_3,
+    #img7_4,
+    #img7_5,
+    #img7_6,
+    #img7_7 {
+        width: 0;
+    }
+
+    #img7_2 {
+        transition: width .1s;
+        transition-delay: .01s;
+
+    }
+
+    .plus25 {
+        display: none;
     }
 
     .text2.text6 {
@@ -492,16 +524,19 @@ h1 {
         align-items: flex-start;
         font-size: calc(.35 * #{$standartSize});
         line-height: calc(.37 * #{$standartSize});
+        
     }
 
     .part__quiz__items {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        .part__quiz__item{
+
+        .part__quiz__item {
             width: calc(3 * #{$standartSize});
         }
-        .part__quiz__item__text{
+
+        .part__quiz__item__text {
             width: calc(2 * #{$standartSize});
         }
     }
@@ -730,6 +765,7 @@ h1 {
 
 .section01.section04 {
     height: calc(25 * #{$standartSize});
+    transition: opacity 1s;
 
     h2 {
         top: calc(2 * #{$standartSize});
@@ -775,6 +811,12 @@ h1 {
         top: calc(10 * #{$standartSize});
         left: calc(1 * #{$standartSize});
         height: calc(6.09 * #{$standartSize});
+        overflow: hidden;
+    }
+
+    #img4_3,
+    #img4_1 {
+        width: 0;
     }
 
     .gradient2 {
@@ -986,6 +1028,7 @@ h1 {
         line-height: calc(.6 * #{$standartSize});
         width: calc(4 * #{$standartSize});
         margin-right: calc(-1 * #{$standartSize});
+        position: relative;
     }
 
     &__item {
