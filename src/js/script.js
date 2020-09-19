@@ -137,14 +137,31 @@ var scene = new ScrollMagic.Scene({ triggerElement: "#img7_1", duration: $("#img
             $("#img7_7").css({ "width": '100%' });
         }
     });
+var scene = new ScrollMagic.Scene({ triggerElement: ".section07 .img2", duration: $(".section07 .img2").outerHeight() })
+    .setTween(tween)
+    .addTo(controller)
+    .on("progress", function(e) {
+        $(".showed_text1").css({ "opacity": (e.progress - 0.3) * 2.7 });
+        $(".showed_text2").css({ "opacity": (e.progress - 0.4) * 3.8 });
+        $(".showed_text3").css({ "opacity": (e.progress - 0.5) * 4.5 });
+        
+    });
 var scene = new ScrollMagic.Scene({ triggerElement: ".answ1 .fade", duration: $(".answ1 .fade").outerHeight() + 300 })
     .setTween(tween)
     .addTo(controller)
     .on("progress", function(e) {
         var top = $(".answ1 .fade").outerHeight() * e.progress;
         $(".answ1").css({ "margin-bottom": "-" + ($(".answ1 .fade").outerHeight() - top) + "px" });
-
         $(".section04").css({ "opacity": e.progress });
+
+    });
+var scene = new ScrollMagic.Scene({ triggerElement: ".answ2 .fade", duration: $(".answ2 .fade").outerHeight() + 300 })
+    .setTween(tween)
+    .addTo(controller)
+    .on("progress", function(e) {
+        var top = $(".answ2 .fade").outerHeight() * e.progress;
+        $(".answ2").css({ "margin-bottom": "-" + ($(".answ2 .fade").outerHeight() - top) + "px" });
+        $(".section07").css({ "opacity": e.progress });
 
     });
 var drawGrid = function(w, h, id) {
@@ -202,10 +219,10 @@ function init() {
     var light1 = new THREE.DirectionalLight("#72f4ff", 1);
     var light2 = new THREE.DirectionalLight("#72f4ff", 1);
     var light3 = new THREE.DirectionalLight("#72f4ff", 1);
-   /* light.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xff0040 })));
-    light1.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xf500ff })));
-    light2.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0x0a00ff })));
-    light3.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0x00fff5 })));*/
+    /* light.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xff0040 })));
+     light1.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0xf500ff })));
+     light2.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0x0a00ff })));
+     light3.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0x00fff5 })));*/
     var ambient = new THREE.AmbientLight("#85b2cd");
 
     /*ambient.add(new THREE.Mesh(sphere, new THREE.MeshBasicMaterial({ color: 0x0000ff })));
@@ -242,16 +259,16 @@ function init() {
             materials.push(new THREE.MeshBasicMaterial({ color: 0xffaa00, transparent: true, blending: THREE.AdditiveBlending }));
             materials.push(new THREE.MeshBasicMaterial({ color: 0x3c88b8, transparent: true }));
 
-         /*   materials.push(new THREE.MeshLambertMaterial({ color: 0xdddddd }));
-            materials.push(new THREE.MeshPhongMaterial({ color: 0xdddddd, specular: 0x009900, shininess: 30, map: texture, transparent: true }));
-            materials.push(new THREE.MeshNormalMaterial({ flatShading: true }));
+            /*   materials.push(new THREE.MeshLambertMaterial({ color: 0xdddddd }));
+               materials.push(new THREE.MeshPhongMaterial({ color: 0xdddddd, specular: 0x009900, shininess: 30, map: texture, transparent: true }));
+               materials.push(new THREE.MeshNormalMaterial({ flatShading: true }));
 
-            materials.push(new THREE.MeshBasicMaterial({ color: 0xffaa00, wireframe: true }));
+               materials.push(new THREE.MeshBasicMaterial({ color: 0xffaa00, wireframe: true }));
 
-            materials.push(new THREE.MeshDepthMaterial());
-            materials.push(new THREE.MeshLambertMaterial({ color: 0x666666, emissive: 0xff0000 }));
-            materials.push(new THREE.MeshPhongMaterial({ color: 0x000000, specular: 0x666666, emissive: 0xff0000, shininess: 10, opacity: 0.9, transparent: true }));
-            materials.push(new THREE.MeshBasicMaterial({ map: texture, transparent: true }));*/
+               materials.push(new THREE.MeshDepthMaterial());
+               materials.push(new THREE.MeshLambertMaterial({ color: 0x666666, emissive: 0xff0000 }));
+               materials.push(new THREE.MeshPhongMaterial({ color: 0x000000, specular: 0x666666, emissive: 0xff0000, shininess: 10, opacity: 0.9, transparent: true }));
+               materials.push(new THREE.MeshBasicMaterial({ map: texture, transparent: true }));*/
 
 
             mesh = gltf.scene;
@@ -300,6 +317,20 @@ function init() {
             $(".part__answer.answer2.true").hide();
             $("#quiz2 .part__quiz__item").removeClass('false');
             $("#quiz2 .part__quiz__item").removeClass('true');
+            $(this).addClass('false');
+        }
+    });
+    $("#quiz3 .part__quiz__item").on("click", function(e) {
+        if ($(this).hasClass("item3")) {
+            $(".part__answer.answer3.false").hide();
+            $(".part__answer.answer3.true").css('display', 'flex');
+            $("#quiz3 .part__quiz__item").removeClass('false');
+            $(this).addClass('true');
+        } else {
+            $(".part__answer.answer3.false").css('display', 'flex');
+            $(".part__answer.answer3.true").hide();
+            $("#quiz3 .part__quiz__item").removeClass('false');
+            $("#quiz3 .part__quiz__item").removeClass('true');
             $(this).addClass('false');
         }
     });
